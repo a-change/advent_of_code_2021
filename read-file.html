@@ -1,0 +1,20 @@
+<html>
+	<body>
+        <input type="file" id="file" name="file" enctype="multipart/form-data" />
+        <div id="result"></div>
+		<script>
+			document.getElementById("file").addEventListener("change", readFile, false);
+
+			function readFile(evt) {
+				var files = evt.target.files;
+				var file = files[0];
+                console.log(file);
+				var reader = new FileReader();
+				reader.onload = function (event) {
+                    document.getElementById("result").innerText = event.target.result;
+				};
+				reader.readAsText(file);
+			}
+		</script>
+	</body>
+</html>
