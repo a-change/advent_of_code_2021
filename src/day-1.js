@@ -3,7 +3,7 @@ const fs = require("fs");
 start();
 
 async function start() {
-	const body = fs.readFileSync("./day-1-input.txt", {
+	const body = fs.readFileSync("../data/day-1-input.txt", {
 		encoding: "utf8",
 		flag: "r",
 	});

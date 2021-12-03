@@ -4,7 +4,7 @@ start();
 
 async function start() {
 	
-    const body = fs.readFileSync("./day-2-input.txt", {
+    const body = fs.readFileSync("../data/day-2-input.txt", {
 		encoding: "utf8",
 		flag: "r",
 	});
@@ -29,7 +29,6 @@ function findCoordinates(array, includeAim) {
             case "forward":
                 horizontal += value;
                 includeAim && (depth += (aim * value));
-                console.log(`value: ${value}, depth: ${depth}, aim: ${aim}`)
                 break;
             case "down":
                 if (includeAim) {

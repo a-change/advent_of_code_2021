@@ -4,7 +4,7 @@ const fs = require("fs");
 start();
 
 async function start() {
-	const body = fs.readFileSync("./day-3-input.txt", {
+	const body = fs.readFileSync("../data/day-3-input.txt", {
 		encoding: "utf8",
 		flag: "r",
 	});
