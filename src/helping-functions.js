@@ -25,5 +25,16 @@ function getMinMax(arr) {
 	return { min, max };
 }
 
+function getMinMaxFromArrayOfObjects(arr, prop) {
+	let min = arr[0][prop];
+	let max = arr[0][prop];
+	let i = arr.length;
 
-module.exports = { transposeArray, getMinMax };
+	while (i--) {
+		min = arr[i][prop] < min ? arr[i][prop] : min;
+		max = arr[i][prop] > max ? arr[i][prop] : max;
+	}
+	return { min, max };
+}
+
+module.exports = { transposeArray, getMinMax, getMinMaxFromArrayOfObjects };
